@@ -1,0 +1,37 @@
+# Site settings
+title: Nate Otto's Learning Path
+description: A collection of badges
+favicon:
+baseurl:
+url: 
+rss_url: /pages/atom.xml
+
+# Build settings
+markdown: kramdown
+
+# Author settings
+author:
+  name: Nate Otto
+  title: Open Badges Evangelist
+  address: Eugene, Oregon
+  email: nate@ottonomy.net
+  link: http://ottonomy.net
+  weibo:
+  github: ottonomy
+  linkedin: 
+  twitter: ottonomy
+  gavatar: 
+  badges:
+    - badge1:
+      badgeName: DPD Project Coordinator
+      issuerName: Design Principles Documentation Project
+      issuerUrl: https://app.achievery.com/passport/id/2515
+      issueYear: 2014
+      issueDate: 2014-09-05
+      description: Awarded for team members on the DPD project that studied badge system design from 2012-2014.
+      criteria: https://app.achievery.com/badge/1716
+      badgeImage: https://images.achievery.com/badgeImages/DPDContributorBadge_1716_1.png
+      assertionUrl: https://app.achievery.com/badge-assertion/4613
+      recipientId: nate@ottonomy.net
+  languages:
+  programmingSkills:
