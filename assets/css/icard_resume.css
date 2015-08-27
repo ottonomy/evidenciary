@@ -40,6 +40,9 @@ a {
     background-color: #575757;
     background-color: rgba(0, 0, 0, 0.6);
 }
+.footer a {
+    color: #f0f0f0;
+}
 
 hr {
     border: 0;
@@ -424,6 +427,21 @@ hr {
 }
 .badge-image {
     float: left;
-    max-width: 50%;
+    max-width: 33%;
     height: auto;
+    min-width: 180px;
+    min-height: 180px;
+    background-color: #ccc;
+    margin-right: 1em;
+}
+
+.timeline-badge-info {
+    list-style: none;
+}
+
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
 }

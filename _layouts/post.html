@@ -2,14 +2,115 @@
 layout: default
 ---
 <div class="post">
-
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta">{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-xs-12 col-md-8">
+        <div class="container-fluid">
+          {% if page.pathway and site.data[page.pathway] %}
+            <div class="row-fluid">
+              <div class="col-xs-12">
+                <h2>{{ site.data[page.pathway].name }}</h2>
+                <small class="text-muted">Posted {{ page.date | date: "%b %-d, %Y" }}</small>
+                <p>{{ site.data[page.pathway].description}}</p>
+                <p class="muted">
+                  <a href="{{ site.data[page.pathway].url }}">Created by: {{ site.data[page.pathway].issuer.name }}</a>
+                </p>
+                {% if site.data[page.pathway].recipient %}
+                  <h3 class="title with-icon"><span class="fa fa-user cat-title"> Recipient Info</span></h3>
+                  <p>
+                      <div class="col-sm-4 visible-md-block visible-lg-block visible-sm-block clearfix">
+                        <p><i class="fa fa-person fa-fw"></i>{{ site.data[page.pathway].recipient.name }}</p>
+                        <p><i class="fa fa-envelope-o fa-fw"></i> {{ site.data[page.pathway].recipient.identity }} </p>
+                      </div>
+                  </p>
+                {% endif %}
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="col-xs-12">
+                <h3 class="title with-icon"><span class="fa fa-certificate cat-title"> Learning Pathway Steps</span></h3>
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="col-xs-12">
+                <ul class="timeline">
+                  {% for node in site.data[page.pathway].pathwaySteps %}
+                    <li class="timeline-inverted">
+                      <div class="pathway-step">
+                        <h3>{{ node.name }}</h3>
+                        <p>{{ node.description }}</p>
+                      </div>
+                      <ul class="pathway-step-badgelist">
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+                        {% for badge in node.earnedBadgeInstance %}
+                          <li class="timeline-badge-info">
+                            <div class="timeline-panel grid-block">
+                              <div class="timeline-heading">
+                                {% if badge.json.badge.name %}
+                                  <h4 class="timeline-title">
+                                    {{ badge.json.badge.name }}
+                                  </h4>
+                                {% endif %}
 
+                                <p>
+                                  <small class="text-muted">
+                                    {% if badge.json.badge %}
+                                      {% if badge.json.badge.issuer.url %}
+                                        <a href="{{ badge.json.badge.issuer.url }}">
+                                          {{ badge.json.badge.issuer.name }}
+                                        </a>
+                                      {% else %}
+                                        {{ badge.json.badge.issuer.name }}
+                                      {% endif %}
+                                    {% endif %}
+                                  </small>
+                                </p>
+                                {% if badge.json.issuedOn %}
+                                  <p>
+                                    <small class="text-muted"><i class="fa fa-calendar"></i> Issued {{ badge.json.issuedOn | date: "%b %-d, %Y" }}
+                                    </small>
+                                  </p>
+                                {% endif %}
+                              </div>
+                              <div class="timeline-body badge-description">
+                                <p class="description-body">
+                                  {% if badge.json.badge.image %}
+                                    <img src="{{ badge.json.badge.image }}" class="badge-image" />
+                                  {% endif %}
+                                  {% if badge.json.badge.description %}
+                                    {{ badge.json.badge.description }}
+                                  {% endif %}
+                                </p>
+                                {% if badge.instance_url and badge.recipient %}
+                                  <p>
+                                    <a class="btn btn-primary" href="http://localhost:8000/?url={{badge.instance_url | cgi_escape }}&recipientId={{badge.recipient | cgi_escape }}"><i class="fa fa-check-circle"></i>Verify</a>
+                                  </p>
+                                {% endif %}
+                              </div>
+                            </div>
+                          </li>
+                        {% endfor %}
+
+                      </ul>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <article class="post-content">
+          {% if post.title %}
+            <h3 class="post-title">{{ post.title }}</h3>
+          {% endif %}
+          {{ content }}
+        </article>
+      </div>
+    </div>
+  </div>
 </div>
