@@ -425,7 +425,7 @@ hr {
     display: block;
     clear: both;
 }
-.badge-image {
+.badge-image{
     float: left;
     max-width: 33%;
     height: auto;
@@ -433,6 +433,16 @@ hr {
     min-height: 180px;
     background-color: #ccc;
     margin-right: 1em;
+}
+
+.avatar {
+    max-width: 100%;
+    height: auto;
+    min-width: 80px;
+    min-height: 80px;
+    background-color: #ccc;
+    margin: 0.5em auto;
+    display: block;
 }
 
 .timeline-badge-info {

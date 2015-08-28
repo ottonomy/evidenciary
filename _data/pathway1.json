@@ -6,7 +6,9 @@
   "recipient": {
     "type": "schema:Person",
     "name": "Nate",
-    "identity": "nate@ottonomy.net"
+    "identity": "nate@ottonomy.net",
+    "id": "http://ottonomy.net",
+    "image": "http://ottonomy.net/mugshot.jpg"
   },
   "pathwaySteps": [
     {

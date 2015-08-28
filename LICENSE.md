@@ -1,3 +1,5 @@
+Based on Resume Jekyll theme by ddbullfrog, produced under the following license. Modifications made by Concentric Sky are also released under the MIT LIcense (MIT):
+
 The MIT License (MIT)
 
 Copyright (c) 2015 ddbullfrog

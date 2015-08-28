@@ -1,6 +1,6 @@
 # Site settings
-title: Nate Otto's Learning Path
-description: A collection of badges
+title: Learning Pathway Showcase
+description: Concentric Sky presents a method of generating and displaying Learning Pathway documents compatible with the Open Badges specification developed by the Badge Alliance. Generate your Learning Pathway with BadgeCheck.io, and use Jekyll's static site generator to display your badge collection to the world.
 favicon:
 baseurl:
 url: 
@@ -9,18 +9,3 @@ analytics_id: 'UA-63653234-1'
 
 # Build settings
 markdown: kramdown
-
-# # Author settings
-# author:
-#   name: Nate Otto
-#   title: Open Badges Evangelist
-#   address: "Eugene, Oregon"
-#   email: nate@ottonomy.net
-#   link: http://ottonomy.net
-#   weibo:
-#   github: ottonomy
-#   linkedin: 
-#   twitter: ottonomy
-#   gavatar: 
-#   languages:
-#   programmingSkills:
