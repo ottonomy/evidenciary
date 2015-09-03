@@ -100,7 +100,7 @@ layout: default
                           {% if badge.json.evidence or badge.instance_url and badge.recipient %}
                             <p>
                               {% if badge.instance_url and badge.recipient %}
-                              <a class="btn btn-primary" href="http://localhost:8000/?url={{badge.instance_url | cgi_escape }}&recipientId={{badge.recipient | cgi_escape }}"><i class="fa fa-check-circle"></i>Verify</a>
+                              <a class="btn btn-primary" href="https://badgecheck.io/?url={{badge.instance_url | cgi_escape }}&recipientId={{badge.recipient | cgi_escape }}"><i class="fa fa-check-circle"></i>Verify</a>
                               {% endif %}
                               {% if badge.json.evidence %}
                               <a class="btn btn-info" href="{{ badge.json.evidence }}"><i class="fa fa-globe"></i>Evidence</a>
@@ -175,7 +175,7 @@ layout: default
                                 {% if badge.json.evidence or badge.instance_url and badge.recipient %}
                                   <p>
                                     {% if badge.instance_url and badge.recipient %}
-                                    <a class="btn btn-primary" href="http://localhost:8000/?url={{badge.instance_url | cgi_escape }}&recipientId={{badge.recipient | cgi_escape }}"><i class="fa fa-check-circle"></i>Verify</a>
+                                    <a class="btn btn-primary" href="https://badgecheck.io/?url={{badge.instance_url | cgi_escape }}&recipientId={{badge.recipient | cgi_escape }}"><i class="fa fa-check-circle"></i>Verify</a>
                                     {% endif %}
                                     {% if badge.json.evidence %}
                                     <a class="btn btn-info" href="{{ badge.json.evidence }}"><i class="fa fa-globe"></i>Evidence</a>
