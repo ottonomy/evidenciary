@@ -2,10 +2,10 @@
 title: Learning Pathway Showcase
 description: Concentric Sky presents a method of generating and displaying Learning Pathway documents compatible with the Open Badges specification developed by the Badge Alliance. Generate your Learning Pathway with BadgeCheck.io, and use Jekyll's static site generator to display your badge collection to the world.
 favicon:
-baseurl:
-url: 
-rss_url: /pages/atom.xml
-analytics_id: 'UA-63653234-1'
+baseurl: "/evidenciary"
+url: "http://ottonomy.github.io/evidenciary/"
+rss_url: /evidenciary/pages/atom.xml
+analytics_id: ''
 
 # Build settings
 markdown: kramdown
