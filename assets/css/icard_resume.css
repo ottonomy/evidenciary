@@ -82,6 +82,11 @@ hr {
     padding-left: 0;
 }
 
+.wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
 .grid-block {
     background-color: #f0f0f0;
     background-color: rgba(255, 255, 255, 0.4);
@@ -129,25 +134,13 @@ hr {
 /* timeline css */
 .timeline {
     list-style: none;
-    padding: 20px 0 20px;
+    padding: 0px 0 20px;
     position: relative;
-}
-
-.timeline:before {
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    content: " ";
-    width: 3px;
-    background-color: #eeeeee;
-    margin-left: -1.5px;
-    left: 2%;
 }
 
 .timeline > li {
     margin-bottom: 20px;
     position: relative;
-    margin-left: 67px;
 }
 
 .timeline > li:before,
@@ -379,7 +372,7 @@ hr {
     border-bottom: 1px solid #ddd;
     position: relative;
     padding-bottom: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     font-size: 18px;
     font-weight: 700;
 }
@@ -455,3 +448,5 @@ hr {
     content: "";
     clear: both;
 }
+
+a i.fa { margin-right: 0.5em;}
